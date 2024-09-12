@@ -20,7 +20,7 @@
             </el-card>
 
         </div>
-        <div class="bg">滚动行为</div>
+        <!-- <div class="bg">滚动行为</div> -->
     </div>
 </template>
 
@@ -84,6 +84,7 @@ const onSubmit = () => {
     })
 } */
 
+// 动态路由方案
 const initRouter = async () => {
     // const result = await axios.get('http://localhost:3000/login', {params: formInline});
     const result = {
