@@ -116,7 +116,7 @@ const initRouter = async () => {
             component: () => import(`../views/${v.component}.vue`)
         })
     });
-    router.push('/nav');
+    router.push('/list');
     sessionStorage.setItem('token', 'true')
     console.log(router.getRoutes());
 
