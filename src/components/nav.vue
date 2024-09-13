@@ -8,15 +8,18 @@
             <button @click="next()">前进</button>
             <!-- <router-link to="/">登录</router-link>
             <router-link to="/reg">注册</router-link> -->
-
             <button @click="loginOut">退出</button>
+            <!-- 采用replace进行页面的跳转会同样也会创建渲染新的Vue组件，但是在history中其不会重复保存记录，而是替换原有的vue组件； -->
+            <!-- replace：替换而不是加入一个新的历史记录。 -->
             <router-link replace :to="{ name: 'login' }">登录</router-link>
-            <router-link repalce :to="{ name: 'reg' }">注册</router-link>
-            <router-link repalce :to="{ name: 'list' }">列表页</router-link>
-            <router-link repalce :to="{ name: 'footer' }">嵌套路由</router-link>
-            <router-link repalce :to="{ name: 'named' }">命名路由</router-link>
-            <router-link repalce to="/demo1">demo1</router-link>
-            <router-link repalce to="/demo2">demo2</router-link>
+            <router-link  :to="{ name: 'reg' }">注册</router-link>
+        </div>
+        <div>
+            <router-link  :to="{ name: 'list' }">列表页</router-link>
+            <router-link  :to="{ name: 'footer' }">嵌套路由</router-link>
+            <router-link  :to="{ name: 'named' }">命名路由</router-link>
+            <router-link  to="/demo1">demo1</router-link>
+            <router-link  to="/demo2">demo2</router-link>
 
             <!-- 会刷新页面，不建议使用 -->
             <!-- <a href="/">登录</a>
@@ -36,8 +39,6 @@
 
 
 <script setup lang="ts">
-import 'animate.css'
-import { ref, reactive } from "vue"
 import { useRouter } from "vue-router"
 const router = useRouter()
 
