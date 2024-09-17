@@ -12,7 +12,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from "vue"
 import Nav from "./components/Nav.vue"
 import "animate.css"
 
